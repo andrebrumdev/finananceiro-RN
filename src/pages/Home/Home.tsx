@@ -25,7 +25,6 @@ export default function Home() {
         <StyledText h1>Dashboard</StyledText>
         <BankSection title="Bancos">
           <DropDownBanks/>
-          <StyledText>adasdsad</StyledText>
         </BankSection>
       </View>
     </SafeAreaProvider>
