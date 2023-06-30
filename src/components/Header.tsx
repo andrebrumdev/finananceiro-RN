@@ -4,6 +4,7 @@ import { View } from 'react-native'
 
 export default function Header() {
     const { theme } = useTheme();
+    const indexPhoto = Math.round(Math.random()*90)
     return (
         <View
             style={{
@@ -31,9 +32,7 @@ export default function Header() {
                         type: "feather"
                     }}
                 />
-                <View
-                   
-                >
+                <View >
                     <FAB
                         style={{
                             position: "relative"
@@ -52,7 +51,7 @@ export default function Header() {
                 <Avatar
                 size={56}
                 rounded
-                source={{ uri:'https://randomuser.me/api/portraits/men/36.jpg' }}
+                source={{ uri:`https://randomuser.me/api/portraits/men/${indexPhoto}.jpg` }}
                 />
             </View>
         </View>

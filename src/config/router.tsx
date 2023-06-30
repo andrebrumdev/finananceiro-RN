@@ -8,11 +8,11 @@ import { AuthRootStackParamList } from './types/AuthRootStack.type';
 
 const RootNavigator = () => {
     const Stack = createNativeStackNavigator<RootStackParamList>();
-    return(
+    return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Login'>
-                <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
-                <Stack.Screen name='AuthRoutes' component={AuthRoutes} options={{headerShown:false}}/>
+            <Stack.Navigator initialRouteName='Login' screenOptions={{ headerShown: false }}>
+                <Stack.Screen name='Login' component={Login} />
+                <Stack.Screen name='AuthRoutes' component={AuthRoutes} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -21,9 +21,9 @@ const RootNavigator = () => {
 function AuthRoutes() {
     const Stack = createNativeStackNavigator<AuthRootStackParamList>();
     return (
-      <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
-      </Stack.Navigator>
+        <Stack.Navigator initialRouteName='Home'>
+            <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        </Stack.Navigator>
     );
 }
 
